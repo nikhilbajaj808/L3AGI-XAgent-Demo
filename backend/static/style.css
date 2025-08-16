@@ -1,0 +1,54 @@
+/* backend/static/style.css */
+:root {
+  --card: #0b1220;
+}
+
+.card {
+  background: var(--card);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+ footer {
+    margin-top: 2.5rem;
+    font-size: 0.75rem;
+    text-align: center;
+    font-weight: bold; /* Make text bold */
+    transition: color 0.5s ease; /* Smooth color transition */
+  }
+
+  /* Light mode */
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  /* Dark mode using class or prefers-color-scheme */
+  body.dark-mode {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+
+  /* Footer color adjustments */
+  body {
+    --footer-color: #000000;
+  }
+  body.dark-mode {
+    --footer-color: #ffffff;
+  }
+  footer {
+    color: var(--footer-color);
+  }
+
+  /* Optional: animate color change */
+  footer {
+    transition: color 0.5s ease, font-weight 0.5s ease;
+  }
